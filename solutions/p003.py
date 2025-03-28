@@ -28,7 +28,8 @@ def nearest_prime_below(n):
 
 
 def is_prime(n):
-    for i in range(2, n):
+    k = ceil(sqrt(n))
+    for i in range(2, k+1):
         if n % i == 0:
             return False
     return True
