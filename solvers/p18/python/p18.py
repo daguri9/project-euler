@@ -7,8 +7,8 @@ def longest_path(triangle):
     for i in range(len(inverted)-1):
         for j in range(len(inverted[i])):
             pos = (i, j)
-            left = (pos[0]+1, pos[1])
-            right = (pos[0]+1, pos[1]+1)
+            left = (i+1, j)
+            right = (i+1, j+1)
             pos_est_l = inverted[left[0]][left[1]] + estimates[pos]
             pos_est_r = inverted[right[0]][right[1]] + estimates[pos]
 
@@ -32,7 +32,7 @@ def longest_path(triangle):
     return sol_path, -estimates[shortest]
 
 if __name__ == "__main__":
-    with open('triangle2.txt') as f:
+    with open('triangle.txt') as f:
         triangle = [[int(x) for x in line.rstrip('\n').split()] for line in f]
 
     result = longest_path(triangle)
