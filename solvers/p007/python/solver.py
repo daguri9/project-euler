@@ -21,8 +21,11 @@ def is_prime(n):
             return False
     return True
 
+def main():
+    print(nth_prime(10001))
+
 if __name__ == "__main__":
     start_time = time.time()
-    print(nth_prime(10001))
+    main()
     elapsed_time = time.time() - start_time
     print(f"Finished in {elapsed_time:.3f} seconds.")

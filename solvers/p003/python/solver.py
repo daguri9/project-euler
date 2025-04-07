@@ -36,9 +36,12 @@ def is_prime(n):
             return False
     return True
 
+def main():
+    print(largest_prime_factor(600851475143))
+
 
 if __name__ == "__main__":
     start_time = time.time()
-    print(largest_prime_factor(600851475143))
+    main()
     elapsed_time = time.time() - start_time
     print(f"Finished in {elapsed_time:.3f} seconds.")

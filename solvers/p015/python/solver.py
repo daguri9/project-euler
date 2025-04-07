@@ -1,7 +1,12 @@
 from math import comb
+import time
 
-def compute(n):
-    return comb(n+n, n)
+def main():
+    n = 20
+    print(comb(n+n, n))
 
 if __name__ == "__main__":
-    print(compute(20))
+    start_time = time.time()
+    main()
+    elapsed_time = time.time() - start_time
+    print(f"Finished in {elapsed_time:.3f} seconds.")

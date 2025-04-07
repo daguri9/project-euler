@@ -1,3 +1,5 @@
+import time
+
 # Inverted sssp on DAG
 def longest_path(triangle):
     path = {}
@@ -31,10 +33,17 @@ def longest_path(triangle):
 
     return sol_path, -estimates[shortest]
 
-if __name__ == "__main__":
-    with open('triangle2.txt') as f:
+
+def main():
+    with open('triangle.txt') as f:
         triangle = [[int(x) for x in line.rstrip('\n').split()] for line in f]
 
     result = longest_path(triangle)
     print(f"path = {result[0]}")
-    print(f"total sum = {result[1]}")
+    print(f"sum = {result[1]}")   
+
+if __name__ == "__main__":
+    start_time = time.time()
+    main()
+    elapsed_time = time.time() - start_time
+    print(f"Finished in {elapsed_time:.3f} seconds.")

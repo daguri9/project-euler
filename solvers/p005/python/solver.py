@@ -1,4 +1,7 @@
-def compute(n):
+import time
+
+def main():
+    n = 20
     candidate = n
     while True:
         discard = False
@@ -9,8 +12,12 @@ def compute(n):
         if discard:
             candidate += 1
         else:
-            return candidate
+            print(candidate)
+            return
 
 
 if __name__ == "__main__":
-    print(compute(20))
+    start_time = time.time()
+    main()
+    elapsed_time = time.time() - start_time
+    print(f"Finished in {elapsed_time:.3f} seconds.")

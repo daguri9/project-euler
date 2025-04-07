@@ -1,3 +1,5 @@
+import time
+
 def fibonacci(x: int):
     if x == 0:
         return []
@@ -12,5 +14,13 @@ def fibonacci(x: int):
             break
     return l
 
-if __name__ == "__main__":
+
+def main():
     print(sum([x for x in fibonacci(4000000) if x % 2 == 0]))
+    
+
+if __name__ == "__main__":
+    start_time = time.time()
+    main()
+    elapsed_time = time.time() - start_time
+    print(f"Finished in {elapsed_time:.3f} seconds.")

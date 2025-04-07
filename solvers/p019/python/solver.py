@@ -1,4 +1,6 @@
-def compute():
+import time
+
+def main():
     days_per_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     first_day_yr = 1
     sunday_count = 0
@@ -10,8 +12,11 @@ def compute():
             day = (first + first_day_yr - 1) % 7
             sunday_count += 1 if day == 0 else 0
 
-    return sunday_count
+    print(sunday_count)
 
 
 if __name__ == "__main__":
-    print(compute())
+    start_time = time.time()
+    main()
+    elapsed_time = time.time() - start_time
+    print(f"Finished in {elapsed_time:.3f} seconds.")

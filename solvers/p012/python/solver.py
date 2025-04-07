@@ -1,17 +1,6 @@
 import time
 from math import sqrt, ceil
 
-def compute(n):
-    triangle = 0
-    divisor_count = 1
-    i = 0
-    while divisor_count < n:
-        i += 1
-        triangle += i
-        divisor_count = divisors(triangle)
-
-    return triangle
-
 def divisors(n):
     prime_factors = get_prime_factors(n)
     amount = 1
@@ -52,8 +41,22 @@ def get_prime_factors(n):
             prime = nearest_prime_above(prime)
     return factors
 
+
+def main():
+    n = 500
+    triangle = 0
+    divisor_count = 1
+    i = 0
+    while divisor_count < n:
+        i += 1
+        triangle += i
+        divisor_count = divisors(triangle)
+
+    print(triangle)
+
+
 if __name__ == "__main__":
     start_time = time.time()
-    print(compute(500))
+    main()
     elapsed_time = time.time() - start_time
     print(f"Finished in {elapsed_time:.3f} seconds.")

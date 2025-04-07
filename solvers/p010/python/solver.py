@@ -22,16 +22,17 @@ def is_prime(n):
     return True
 
 
-def compute(n):
+def main():
+    n = 2_000_000
     next_prime = nearest_prime_below(n)
     total_sum = 0
     while next_prime != -1:
         total_sum += next_prime
         next_prime = nearest_prime_below(next_prime)
 
-    return total_sum
+    print(total_sum)
 if __name__ == "__main__":
     start_time = time.time()
-    print(compute(2_000_000))
+    main()
     elapsed_time = time.time() - start_time
     print(f"Finished in {elapsed_time:.3f} seconds.")
