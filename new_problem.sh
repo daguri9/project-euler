@@ -25,6 +25,7 @@ if __name__ == "__main__":
     main()
     elapsed_time = time.time() - start_time
     print(f"Finished in {elapsed_time:.3f} seconds.")
+
 EOF
 
 echo "Created ${DIR}/python/solver.py"
