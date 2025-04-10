@@ -3,7 +3,7 @@ from math import factorial
 
 def nth_perm(s, n):
     if factorial(len(s)) < n:
-        raise e
+        raise ValueError("Not enough permutations.")
     if len(s) == 1:
         return s
     else:
