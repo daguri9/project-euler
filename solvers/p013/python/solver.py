@@ -1,10 +1,12 @@
 import time
 
+
 def main():
-    with open('numbers.txt') as f:
+    with open("numbers.txt") as f:
         numbers = [int(line) for line in f]
 
     print(str(sum(numbers))[:10])
+
 
 if __name__ == "__main__":
     start_time = time.time()

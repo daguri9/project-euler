@@ -1,8 +1,9 @@
 import time
 
+
 def main():
-    with open('grid.txt') as f:
-        grid = [[int(x) for x in line.rstrip('\n').split()] for line in f]
+    with open("grid.txt") as f:
+        grid = [[int(x) for x in line.rstrip("\n").split()] for line in f]
 
     highest = 0
     for i in range(20):
@@ -13,7 +14,7 @@ def main():
                 for n in grid[i][j : j + 4]:
                     result *= n
                 highest = result if result > highest else highest
-                
+
             # Vertically
             if i <= 20 - 4:
                 result = 1
@@ -39,8 +40,8 @@ def main():
                     m -= 1
                 highest = result if result > highest else highest
 
-
     print(highest)
+
 
 if __name__ == "__main__":
     start_time = time.time()

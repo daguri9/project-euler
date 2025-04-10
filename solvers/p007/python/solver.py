@@ -1,6 +1,7 @@
 import time
 
-def nth_prime(n,  print_interval=100):
+
+def nth_prime(n, print_interval=100):
     ith = 1
     prime_cand = 1
     iterations = 0
@@ -13,7 +14,7 @@ def nth_prime(n,  print_interval=100):
             ith += 1
     print()
     return prime_cand
-        
+
 
 def is_prime(n):
     for i in range(2, n):
@@ -21,8 +22,10 @@ def is_prime(n):
             return False
     return True
 
+
 def main():
     print(nth_prime(10001))
+
 
 if __name__ == "__main__":
     start_time = time.time()

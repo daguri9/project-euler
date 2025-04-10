@@ -1,8 +1,9 @@
 import time
 import csv
 
+
 def main():
-    with open('names.txt') as f:
+    with open("names.txt") as f:
         reader = csv.reader(f)
         names = next(reader)
 
@@ -16,7 +17,7 @@ def main():
         score = i * worth
         total += score
         i += 1
-    
+
     print(total)
 
 

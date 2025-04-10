@@ -1,5 +1,6 @@
 import time
 
+
 def main():
     digits = list(str(2**1000))
     result = 0
@@ -7,6 +8,7 @@ def main():
         result += int(d)
 
     print(result)
+
 
 if __name__ == "__main__":
     start_time = time.time()

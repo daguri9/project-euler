@@ -31,10 +31,11 @@ def is_prime(n):
     k = ceil(sqrt(n))
     if n % 2 == 0 or n < 2:
         return False
-    for i in range(3, k+1, 2):
+    for i in range(3, k + 1, 2):
         if n % i == 0:
             return False
     return True
+
 
 def main():
     print(largest_prime_factor(600851475143))

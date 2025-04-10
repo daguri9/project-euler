@@ -1,5 +1,6 @@
 import time
 
+
 def main():
     for i in range(999, 900, -1):
         for j in range(999, 900, -1):

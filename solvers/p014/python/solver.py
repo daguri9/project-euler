@@ -1,13 +1,15 @@
 import time
 
+
 def get_sequence(n):
     current = n
     sequence = [n]
     while current > 1:
-        current = current // 2 if current % 2 == 0 else 3*current + 1
+        current = current // 2 if current % 2 == 0 else 3 * current + 1
         sequence.append(current)
 
     return sequence
+
 
 def main():
     candidate = 1

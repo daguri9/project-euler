@@ -1,9 +1,10 @@
 from math import factorial
 import time
 
+
 def main():
     n = 100
-    digits = (str(factorial(n)))
+    digits = str(factorial(n))
     total_sum = 0
     for d in digits:
         total_sum += int(d)

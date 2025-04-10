@@ -1,6 +1,7 @@
 from math import sqrt, ceil
 import time
 
+
 def nearest_prime_below(n):
     if n == 3:
         return 2
@@ -16,7 +17,7 @@ def is_prime(n):
     k = ceil(sqrt(n))
     if n % 2 == 0:
         return False
-    for i in range(3, k+1, 2):
+    for i in range(3, k + 1, 2):
         if n % i == 0:
             return False
     return True
@@ -31,6 +32,8 @@ def main():
         next_prime = nearest_prime_below(next_prime)
 
     print(total_sum)
+
+
 if __name__ == "__main__":
     start_time = time.time()
     main()

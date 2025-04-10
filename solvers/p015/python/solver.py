@@ -1,9 +1,11 @@
 from math import comb
 import time
 
+
 def main():
     n = 20
-    print(comb(n+n, n))
+    print(comb(n + n, n))
+
 
 if __name__ == "__main__":
     start_time = time.time()

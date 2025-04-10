@@ -1,6 +1,7 @@
 import time
 from math import sqrt, ceil
 
+
 def divisors(n):
     prime_factors = get_prime_factors(n)
     amount = 1
@@ -9,14 +10,16 @@ def divisors(n):
 
     return amount
 
+
 def is_prime(n):
     k = ceil(sqrt(n))
     if n % 2 == 0:
         return False
-    for i in range(3, k+1, 2):
+    for i in range(3, k + 1, 2):
         if n % i == 0:
             return False
     return True
+
 
 def nearest_prime_above(n):
     if n <= 1:
@@ -26,8 +29,9 @@ def nearest_prime_above(n):
     while not prime_found:
         k += 2
         prime_found = is_prime(k)
-    
+
     return k
+
 
 def get_prime_factors(n):
     cuotient = n

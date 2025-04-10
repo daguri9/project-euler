@@ -1,16 +1,17 @@
 import time
 
+
 # Inverted sssp on DAG
 def longest_path(triangle):
     path = {}
     inverted = [list(map(lambda x: -x, i)) for i in triangle]
     estimates = {(0, 0): inverted[0][0]}
 
-    for i in range(len(inverted)-1):
+    for i in range(len(inverted) - 1):
         for j in range(len(inverted[i])):
             pos = (i, j)
-            left = (i+1, j)
-            right = (i+1, j+1)
+            left = (i + 1, j)
+            right = (i + 1, j + 1)
             pos_est_l = inverted[left[0]][left[1]] + estimates[pos]
             pos_est_r = inverted[right[0]][right[1]] + estimates[pos]
 
@@ -22,8 +23,9 @@ def longest_path(triangle):
                 estimates[right] = pos_est_r
                 path[right] = pos
 
-
-    last_row_est = {pos: est for pos, est in estimates.items() if pos[0] == len(inverted)-1}
+    last_row_est = {
+        pos: est for pos, est in estimates.items() if pos[0] == len(inverted) - 1
+    }
     shortest = min(last_row_est, key=last_row_est.get)
     nxt = shortest
     sol_path = [nxt]
@@ -35,12 +37,13 @@ def longest_path(triangle):
 
 
 def main():
-    with open('triangle.txt') as f:
-        triangle = [[int(x) for x in line.rstrip('\n').split()] for line in f]
+    with open("triangle.txt") as f:
+        triangle = [[int(x) for x in line.rstrip("\n").split()] for line in f]
 
     result = longest_path(triangle)
     print(f"path = {result[0]}")
-    print(f"sum = {result[1]}")   
+    print(f"sum = {result[1]}")
+
 
 if __name__ == "__main__":
     start_time = time.time()

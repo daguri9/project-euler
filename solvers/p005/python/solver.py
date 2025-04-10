@@ -1,11 +1,12 @@
 import time
 
+
 def main():
     n = 20
     candidate = n
     while True:
         discard = False
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             if candidate % i != 0:
                 discard = True
                 break
