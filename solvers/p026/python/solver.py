@@ -1,4 +1,5 @@
-import time     
+import time
+
 
 # Get repetend by long division
 def rep_len(n, m):
@@ -19,25 +20,22 @@ def rep_len(n, m):
     length -= rep_pos
 
     return reptend, length
-        
+
 
 def main():
     largest = 0
     largest_val = 0
     div = 0
-    for i in range (1, 1000):
+    for i in range(1, 1000):
         rep, length = rep_len(1, i)
         if length > largest_val:
             largest_val = length
             largest = rep
             div = i
-        
+
     print(f"Longest recurring cycle with 1/{div}")
     print(f"Repetend {largest}")
     print(f"Length {largest_val}")
-
-
-
 
 
 if __name__ == "__main__":
